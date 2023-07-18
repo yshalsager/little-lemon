@@ -1,16 +1,8 @@
-from django.test import TestCase
 from django.urls import reverse
 from rest_framework.test import APITestCase
 from rest_framework.status import HTTP_200_OK
 
-from .models import MenuItem
-
-
-# Create your tests here.
-class MenuItemTest(TestCase):
-    def test_get_item(self):
-        item = MenuItem.objects.create(title="IceCream", price=80, inventory=100)
-        self.assertEqual(str(item), "IceCream: (80)")
+from ..models import MenuItem
 
 
 class MenuViewTest(APITestCase):
