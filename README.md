@@ -20,7 +20,7 @@ To run this project, you will need to have Python 3 and MySQL installed on your 
 The API has the following endpoints:
 
 - `/auth/users/`: User registration API
-- `/api-token-auth/`: Token authorization API
+- `/restaurant/api-token-auth/`: Token authorization API
 - `/restaurant/menu/`: Menu items API
 - `/restaurant/booking/tables/`: Table booking API
 
