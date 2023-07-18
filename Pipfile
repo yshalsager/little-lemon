@@ -5,7 +5,6 @@ verify_ssl = true
 
 [packages]
 django = "*"
-django-filter = "*"
 djangorestframework = "*"
 djoser = "*"
 mysqlclient = "*"

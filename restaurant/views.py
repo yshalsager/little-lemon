@@ -17,10 +17,16 @@ class MenuItemsView(generics.ListCreateAPIView):
     serializer_class = MenuItemSerializer
     queryset = MenuItem.objects.all()
 
+    def get_permissions(self):
+        return [IsAuthenticated()] if self.request.method != "GET" else []
+
 
 class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
     serializer_class = MenuItemSerializer
     queryset = MenuItem.objects.all()
+
+    def get_permissions(self):
+        return [IsAuthenticated()] if self.request.method != "GET" else []
 
 
 class UserViewSet(viewsets.ModelViewSet):
